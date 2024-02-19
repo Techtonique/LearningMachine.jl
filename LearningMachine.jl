@@ -177,7 +177,7 @@ module LearningMachine
     function BaseRegressor()
         R"""
     	library(learningmachine)
-    	learningmachine::BaseRegressor$new()
+    	BaseRegressor$new()
     	"""
     end
 	
