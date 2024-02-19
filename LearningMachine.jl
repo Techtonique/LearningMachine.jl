@@ -1,9 +1,9 @@
 module LearningMachine	
 
 	# exports 
-    export BaseRegressor
+    export baseregressor
 
-	function BaseRegressor()
+	function baseregressor()
         #R"""
 		#library(learningmachine)
 		#obj <- learningmachine::BaseRegressor$new()

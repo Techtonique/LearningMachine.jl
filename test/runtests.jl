@@ -28,7 +28,7 @@ end
     println(y[1:5])
 
     # Create a BaseRegressor
-    obj = lm.BaseRegressor()
+    obj = lm.baseregressor()
 
     # Fit the model
     #obj["fit"](X[1:80, :], y[1:80])
