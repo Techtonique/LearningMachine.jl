@@ -179,7 +179,7 @@ module LearningMachine
 		library(learningmachine)
 		obj <- learningmachine::BaseRegressor$new()
 		"""
-		return R"obj"
+		return rcopy("obj")
     end
 	
 end
