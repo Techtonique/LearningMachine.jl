@@ -74,7 +74,7 @@ module LearningMachine
 			run(`sudo Rscript -e "utils::install.packages('Rcpp', repos='https://cran.rstudio.com', dependencies=TRUE)"`)
 			run(`sudo Rscript -e "utils::install.packages('snow', repos='https://cran.rstudio.com', dependencies=TRUE)"`)						
 			run(`sudo Rscript -e "utils::install.packages('tseries', repos='https://cran.rstudio.com', dependencies=TRUE)"`)			
-			run(`sudo Rscript -e "utils::install.packages('learningmachine', repos='https://techtonique.r-universe.dev', dependencies=TRUE)"`)
+			run(`sudo Rscript -e "utils::install.packages('learningmachine', repos=c('https://techtonique.r-universe.dev', 'https://cloud.r-project.org'), dependencies=TRUE)"`)
 		catch e1		
 			try 
 				run(`sudo Rscript -e "install.packages('remotes', repos='https://cran.rstudio.com', lib= '.', dependencies=TRUE)"`)	
@@ -85,7 +85,7 @@ module LearningMachine
 				run(`sudo Rscript -e "install.packages('Rcpp', repos='https://cran.rstudio.com', lib= '.', dependencies=TRUE)"`)
 				run(`sudo Rscript -e "install.packages('snow', repos='https://cran.rstudio.com', lib= '.', dependencies=TRUE)"`)
 				run(`sudo Rscript -e "install.packages('tseries', repos='https://cran.rstudio.com', lib= '.', dependencies=TRUE)"`)
-				run(`sudo Rscript -e "utils::install.packages('learningmachine', repos='https://techtonique.r-universe.dev', lib= '.', dependencies=TRUE)"`)
+				run(`sudo Rscript -e "utils::install.packages('learningmachine', repos=c('https://techtonique.r-universe.dev', 'https://cloud.r-project.org'), lib= '.', dependencies=TRUE)"`)
 			catch e2
 				println("Done trying to install R packages")
 			end 
@@ -104,7 +104,7 @@ module LearningMachine
 			run(`Rscript -e "utils::install.packages('Rcpp', repos='https://cran.rstudio.com', dependencies=TRUE)"`)
 			run(`Rscript -e "utils::install.packages('snow', repos='https://cran.rstudio.com', dependencies=TRUE)"`)						
 			run(`Rscript -e "utils::install.packages('tseries', repos='https://cran.rstudio.com', dependencies=TRUE)"`)
-			run(`Rscript -e "utils::install.packages('learningmachine', repos='https://techtonique.r-universe.dev', dependencies=TRUE)"`)
+			run(`Rscript -e "utils::install.packages('learningmachine', repos=c('https://techtonique.r-universe.dev', 'https://cloud.r-project.org'), dependencies=TRUE)"`)
 		catch e1		
 			try 
 				run(`Rscript -e "install.packages('remotes', repos='https://cran.rstudio.com', lib= '.', dependencies=TRUE)"`)	
@@ -114,7 +114,7 @@ module LearningMachine
 				run(`Rscript -e "install.packages('foreach', repos='https://cran.rstudio.com', lib= '.', dependencies=TRUE)"`)
 				run(`Rscript -e "install.packages('Rcpp', repos='https://cran.rstudio.com', lib= '.', dependencies=TRUE)"`)
 				run(`Rscript -e "install.packages('snow', repos='https://cran.rstudio.com', lib= '.', dependencies=TRUE)"`)
-				run(`Rscript -e "utils::install.packages('learningmachine', repos='https://techtonique.r-universe.dev', lib= '.', dependencies=TRUE)"`)
+				run(`Rscript -e "utils::install.packages('learningmachine', repos=c('https://techtonique.r-universe.dev', 'https://cloud.r-project.org'), lib= '.', dependencies=TRUE)"`)
 			catch e2
 				println("Done trying to install R packages")
 			end 
