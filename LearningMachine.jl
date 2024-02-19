@@ -177,8 +177,8 @@ module LearningMachine
     function BaseRegressor()
         R"""
     	library(learningmachine)
+    	learningmachine::BaseRegressor$new()
     	"""
-    	return rcopy(Revaluate(quote new(BaseRegressor) end))
     end
 	
 end
