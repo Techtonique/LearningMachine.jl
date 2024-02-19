@@ -1,10 +1,18 @@
 name = "LearningMachine"
 uuid = "634aa325-58bb-4433-8165-053721a5c3a4"
-authors = ["Thierry Moudiki <thierry.moudiki@gmail.com> and contributors"]
+authors = ["T. Moudiki <thierry.moudiki@gmail.com>"]
 version = "1.0.0-DEV"
 
 [compat]
-julia = "1.6"
+Distributions = "0.25.107"
+julia = "1.10"
+Pkg = "1.6.7"
+RCall = "0.14.0"
+
+[deps]
+Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
+RCall = "6f49c342-dc21-5d91-9882-a32aef131414"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
