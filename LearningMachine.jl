@@ -176,7 +176,7 @@ module LearningMachine
 
     function BaseRegressor()
         return rcopy(Revaluate(quote
-                            learningMachine:::BaseRegressor$new()
+                            learningMachine::BaseRegressor$new()
                             end))
     end
 	

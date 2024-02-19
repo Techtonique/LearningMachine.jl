@@ -16,7 +16,7 @@ using Random
     X = randn(num_samples, 2)
 
     # Generate corresponding labels (0 or 1)
-    y = rand([0, 1], num_samples)
+    y = randn(num_samples)
 
     # Display the first few samples
     println("Features:")
@@ -24,7 +24,7 @@ using Random
     println("\nLabels:")
     println(y[1:5])
 
-    obj = LearningMachine.BaseRegressor()
+    obj = BaseRegressor()
     obj["fit"](X=X[1:80, :], y=y[1:80])
     println(obj["predict"](X=X[81:100, :]))
     @test 1 == 1
