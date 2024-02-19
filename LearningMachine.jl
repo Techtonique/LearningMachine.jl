@@ -175,10 +175,10 @@ module LearningMachine
 	"""
 
     function BaseRegressor()
-        R"""
+        return rcopy(R"""
     	library(learningmachine)
     	BaseRegressor$new()
-    	"""
+    	""")
     end
 	
 end
