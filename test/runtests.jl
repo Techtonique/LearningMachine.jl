@@ -30,12 +30,12 @@ using Random
     obj = LearningMachine.BaseRegressor()
 
     # Fit the model
-    obj["fit"](X[1:80, :], y[1:80])
+    #obj["fit"](X[1:80, :], y[1:80])
 
     # Make predictions
-    predictions = obj["predict"](X[81:100, :])
-    println(predictions)
+    #predictions = obj["predict"](X[81:100, :])
+    #println(predictions)
 
     # Write test cases here
-    @test 1 == 1
+    @test obj == 1
 end

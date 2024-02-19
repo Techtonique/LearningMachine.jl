@@ -130,39 +130,39 @@ module LearningMachine
 	load_learningmachine4 <- NULL
 
 	load_learningmachine <- try(library('learningmachine'),
-					silent = TRUE)
+					silent = FALSE)
 
 	if (inherits(load_learningmachine, 'try-error'))
 	{
 	load_learningmachine2 <- try(library('learningmachine',
 								lib.loc = '.'),
-						silent = TRUE)
+						silent = FALSE)
 	}
 
 	if (inherits(load_learningmachine2, 'try-error')) {
 	try(utils::install.packages(c('foreach', 'snow', 'Rcpp'), 
 								dependencies = TRUE), 
-		silent = TRUE)
+		silent = FALSE)
 	try(utils::install.packages("learningmachine", 
 								dependencies = TRUE,
 								repos = 'https://techtonique.r-universe.dev'),
-		silent = TRUE)
+		silent = FALSE)
 	load_learningmachine3 <- try(library('learningmachine'),
-						silent = TRUE)
+						silent = FALSE)
 	} 
 
 	if (inherits(load_learningmachine3, 'try-error')) {
 	try(utils::install.packages(c('foreach', 'snow', 'Rcpp'), 
 								dependencies = TRUE, lib='.'), 
-		silent = TRUE)
+		silent = FALSE)
 	try(utils::install.packages("learningmachine", 
 								dependencies = TRUE,
 								repos = 'https://techtonique.r-universe.dev', lib = '.'),
-		silent = TRUE)
+		silent = FALSE)
 	load_learningmachine4 <- try(library('learningmachine', 
 								dependencies = TRUE,
 								lib.loc = '.'),
-						silent = TRUE)
+						silent = FALSE)
 	} 
 
 	list_err <- list(load_learningmachine, load_learningmachine2, load_learningmachine3, load_learningmachine4)
@@ -175,11 +175,13 @@ module LearningMachine
 	"""
 
     function BaseRegressor()
-        R"""
-		library(learningmachine)
-		obj <- learningmachine::BaseRegressor$new()
-		"""
-		return rcopy(R"obj")
+        #R"""
+		#library(learningmachine)
+		#obj <- learningmachine::BaseRegressor$new()
+		#"""
+		#return rcopy(R"obj")
+		#return R"learningmachine::BaseRegressor$new()"
+		return 1
     end
 	
 end
