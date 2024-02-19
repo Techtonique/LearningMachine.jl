@@ -1,5 +1,9 @@
+using Pkg 
 using LearningMachine
 using Test
+
+Pkg.add("Random")
+
 using Random
 
 @testset "LearningMachine.jl" begin
