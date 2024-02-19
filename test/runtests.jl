@@ -1,13 +1,15 @@
-using Pkg 
+using Pkg
 using LearningMachine
 using Test
 
-Pkg.add("Random")
+# Check if the Random package is installed, and install it if not
+if !haskey(Pkg.installed(), "Random")
+    Pkg.add("Random")
+end
 
 using Random
 
 @testset "LearningMachine.jl" begin
-
     # Example: Generate a dataset with 100 samples
     num_samples = 100    
     Random.seed!(42)
@@ -24,9 +26,16 @@ using Random
     println("\nLabels:")
     println(y[1:5])
 
-    obj = BaseRegressor()
-    obj["fit"](X=X[1:80, :], y=y[1:80])
-    println(obj["predict"](X=X[81:100, :]))
+    # Create an object of BaseRegressor
+    obj = LearningMachine.BaseRegressor()
+
+    # Fit the model
+    obj["fit"](X[1:80, :], y[1:80])
+
+    # Make predictions
+    predictions = obj["predict"](X[81:100, :])
+    println(predictions)
+
+    # Write test cases here
     @test 1 == 1
-    
 end
