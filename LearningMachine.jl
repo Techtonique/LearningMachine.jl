@@ -1,7 +1,7 @@
 module LearningMachine	
 
 	# exports 
-    # here
+    export BaseRegressor
 
 	if Sys.islinux()	
 		try	
@@ -173,6 +173,12 @@ module LearningMachine
 	)
 	}  
 	"""
+
+    function BaseRegressor()
+        return rcopy(Revaluate(quote
+                            learningMachine:::BaseRegressor$new()
+                            end))
+    end
 	
 end
 
