@@ -74,7 +74,7 @@ module LearningMachine
 			run(`sudo Rscript -e "utils::install.packages('Rcpp', repos='https://cran.rstudio.com', dependencies=TRUE)"`)
 			run(`sudo Rscript -e "utils::install.packages('snow', repos='https://cran.rstudio.com', dependencies=TRUE)"`)						
 			run(`sudo Rscript -e "utils::install.packages('tseries', repos='https://cran.rstudio.com', dependencies=TRUE)"`)			
-			run(`sudo Rscript -e "utils::install.packages('learningMachine', repos='https://techtonique.r-universe.dev', dependencies=TRUE)"`)
+			run(`sudo Rscript -e "utils::install.packages('learningmachine', repos='https://techtonique.r-universe.dev', dependencies=TRUE)"`)
 		catch e1		
 			try 
 				run(`sudo Rscript -e "install.packages('remotes', repos='https://cran.rstudio.com', lib= '.', dependencies=TRUE)"`)	
